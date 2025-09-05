@@ -1,0 +1,117 @@
+#container{
+    width: 95%;
+    max-width: 980px; /*largura máxima*/
+    height: auto;
+    margin: auto;/* centraliza o container*/
+}
+
+header#topo{
+    width: 100%;
+    height: 84px;
+    /*background-color:aqua;*/
+
+    
+}
+ #logo{
+    width: 204px;
+    height: 84px;
+    float: left;
+    margin: 20px auto;
+ }
+ nav#menu{
+    width: 100%;
+    height: 40px;
+    background: color #111; ;
+    float: left;
+    text-align: center;
+    line-height: 40px; /*alinha o texto verticalmente o texto*/
+    border-radius: 5px;
+ }
+ nav#menu a{
+color: #fff;
+margin: 0 20px;
+text-decoration: underline;
+ }
+article#conteudo{
+    width: 60%;
+    height: auto;
+    float: left;  
+    margin-bottom: 10px; 
+}
+    div#video{
+        width: 980px;
+        height: auto;
+        float: left;
+        margin-bottom: 10px;
+        background-color: aquamarine;
+    
+    }
+    div#video v1{
+        background-color: beige;
+        width: 45%;
+        height: 280px;
+        float: left;
+    }
+
+div#anunciotablet{
+    float: left;
+    width: 100%;
+    height: 90px;
+    background-color: #f90;
+    text-align: center;
+    line-height: 90px;/*alinha o texto verticalmente o texto*/
+    color: #fff;
+    margin-bottom: 10px;
+    border-radius: 5 px;
+    font-size: 30px;
+    display: none;/*oculta o anúncio*/
+}
+aside#lateral{
+    width: 35%;
+    height: auto;
+    float: right;
+
+}
+footer#rodape{
+    width: 100%;
+    height: 60px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 5px;
+    margin: top 10px; ;
+    float: left;
+}
+article#conteúdo1 form{
+    margin-top: 10px;
+    input[type]
+}
+
+    
+/* Media Query CC3*/
+@media  screen and( min-widht:600px) and (max-width: 700px){
+    div#anunciotablet
+        display: block;/* exibe o anuncio em telas de tablet*/
+    
+
+
+@media screen and (max-width:400px)
+
+nav#menu{
+height: auto;
+    
+}
+    nav#menu a{
+        display: block;
+        margin: 0 14px;
+        border-bottom: 1px solid #fff;
+    }
+    div#principal
+        display: none;
+    
+
+
+
+
+        
