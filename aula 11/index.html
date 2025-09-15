@@ -121,9 +121,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#funcionario">LISTAR</a></li>
-                            <li><a class="dropdown-item" href="#"
-                                data-bs-toggle="modal" data-bs-target="#exampleModal">DETALHE</a></li>
-
+                            <li><a class="dropdown-item" href="#detalhe">DETALHE</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -134,17 +132,17 @@
         </div>
     </nav>
     <!--Seções-->
-    <section id="Home" class="bg-primary text-white text-center">
+    <section id="home" class="bg-primary text-white text-center">
         <!--diminui a imagem-->
         <h1>Home</h1>
         <img src="Logo AllSports em fundo vermelho.png" alt="Logo AllSports" width="200px" height="200px">
         <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="formula-1.jpg" class="d-block mx-auto" width="900" height="300" alt="Corrida">
+                    <img src="corrida.jpg" class="d-block mx-auto" width="900" height="300" alt="Corrida">
                 </div>
                 <div class="carousel-item">
-                    <img src="futebol.jpg" class="d-block mx-auto" width="900" height="300" alt="Estádio">
+                    <img src="stadium.jpg" class="d-block mx-auto" width="900" height="300" alt="Estádio">
                 </div>
                 <div class="carousel-item">
                     <img src="basquete.png" class="d-block mx-auto" width="900" height="300" alt="Basquete">
@@ -161,11 +159,10 @@
         </div>
         
         
-        
             
     </section>
-    <section id="Cadastrar" class="bg-secondary text-white text-center">
-        <h1>Cadastrar</h1> 
+    <section id="cadastrar" class="bg-secondary text-white text-center">
+        <h1>Cadastrar</h1>  
         <table class="table table-striped">
             <tr>
                 <td>Nome</td>
@@ -183,16 +180,10 @@
                 <td>(21) 99876-5432</td>
             </tr>
 
+
+            
           </table>
-          <nav aria-label="Page navigation example">
-            <ul class="pagination">
-              <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">Próximo</a></li>
-            </ul>
-          </nav>
+        
         
 </section>
 
@@ -204,12 +195,28 @@
     <form action="">
 <div class="col-md-6">
     <div class="mb-3">
-        <label for="cep" class="form-label">CEP</label>
-        <input type="text" class="form-control" id="cep" placeholder="Digite o CEP" onblur="pesquisacep(this.value)">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" placeholder="Digite o nome">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Digite o email">
+    </div>
+    <div class="mb-3">
+        <label for="telefone" class="form-label">Telefone</label>
+        <input type="tel" class="form-control" id="telefone" placeholder="Digite o telefone">
     </div>
     <div class="mb-3">
         <label for="rua" class="form-label">Rua</label>
         <input type="text" class="form-control" id="rua" placeholder="Digite a rua">
+    </div>
+    <div class="mb-3">
+        <label for="cep" class="form-label">CEP</label>
+        <input type="text" class="form-control" id="cep" placeholder="Digite o CEP">
+    </div>
+    <div class="mb-3">
+        <label for="logradouro" class="form-label">Logradouro</label>
+        <input type="text" class="form-control" id="logradouro" placeholder="Digite o logradouro">
     </div>
     <div class="mb-3">
         <label for="numero" class="form-label">Número</label>
@@ -224,14 +231,13 @@
         <input type="text" class="form-control" id="cidade" placeholder="Digite a cidade">
     </div>
     <div class="mb-3">
-        <label for="uf" class="form-label">Estado</label>
-        <input type="text" class="form-control" id="uf" placeholder="Digite o estado">
+        <label for="estado" class="form-label">Estado</label>
+        <input type="text" class="form-control" id="estado" placeholder="Digite o estado">
     </div>
     <div class="mb-3">
-        <label for="ibge" class="form-label">IBGE</label>
+        <label for="ibge" class="">IBGE</label>
         <input type="text" class="form-control" id="ibge" placeholder="Digite o ibge">
     </div>
-    
     <div class="mb-3">
         <button type="submit" class="btn btn-light">Enviar</button>
 </div>
@@ -242,9 +248,8 @@
 </form>
 
 </section>
-<section id="detalhe" class="bg-warning text-dark text-center">
+<section id="contato" class="bg-info text-white text-center">
     <h1>Detalhes</h1>
-
     
 </section>
 <section id="contatos" class="bg-info text-white text-center">
@@ -257,36 +262,7 @@
     
     
 </section>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary">
-    Launch demo modal
-  </button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Trabalhe Conosco</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <form action="">
-                <label for="email"> E-mail</label>
-                <input type="email" id="email" class="form-control" placeholder="Digite seu e-mail">
-                <label for="senha"> Senha</label>
-                <input type="password" id="senha" class="form-control" placeholder="Digite sua senha">
 
-            </form>
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary">salvar</button>
-        </div>
-      </div>
-    </div>
-  </div>
     <!-- Bootstrap JS Bundle (com Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
