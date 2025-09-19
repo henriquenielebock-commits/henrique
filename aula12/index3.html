@@ -58,9 +58,9 @@
                                         <div class="col-6 mb-3">
                                             <label for="estado" class="form-label">Estado</label>
                                             <select name="estado" id="estado" class="form-control">
-                                                <option value="">MG</option>
-                                                <option value="">RJ</option>
-                                                <option value="">SP</option>
+                                                <option value="">Selecione</option>
+                                                <option value="RJ">RJ</option>
+                                                <option value="SP">SP</option>
                                             </select>
                                         </div>
                                         <div class="col-6 mb-3">
@@ -71,7 +71,7 @@
                                                 <option value="">Selecione a Cidade</option>
                                             </select>
                                         </div>
-                                
+                            
                             </div><!--fecha a linha dentro do card-->
 
                         </div><!--fecha body card-->
@@ -94,3 +94,31 @@
 </body>
 
 </html>
+//validar os dados (simples)
+                if(nome === "" || email === "" || salario === ""){
+                    alert("Por favor, preencha todos os campos.");
+                    return;
+                }
+
+                //adicionar os dados na tabela
+                const novaLinha = `
+                    <tr>
+                        <td>${nome}</td>
+                        <td>${email}</td>
+                        <td>R$ ${salario}</td>
+                    </tr>
+                `;
+                $("table tbody").append(novaLinha);
+
+                //mostrar a grid
+                $(".grid").show();
+
+                //limpar o formulário
+                $("#nome").val("");
+                $("#email").val("");
+                $("#salario").val("");
+                $("#estado").val("");
+                $("#cidade").html("<option value=''>Selecione a cidade</option>");
+
+            });//fecha o clique do botão enviar
+            }
