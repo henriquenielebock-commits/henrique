@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Idade</title>
+    <script>
+        function verificarIdade(){
+
+            const idade = prompt("Por favor, informe a sua idade!");
+            
+            if(idade === null){
+                alert("Voce precisa informar a idade....");
+                return;
+            }
+            const  idaden = parseInt(idade);
+            if(isNaN(idaden)){
+                alert("Idade invalida. Por favor, insira um número");
+                return;
+            }
+
+            if(idaden < 18){
+                alert("Acesso negado...");
+                document.body.innerHTML="<h2> Conteúdo bloqueado para menores</h2>";
+            }else{
+                 alert("Acesso Permitido...");
+                document.getElementById("conteudo").style.display="block";
+            }
+
+
+            
+        }
+        window.onload = verificarIdade;
+    </script>
+</head>
+
+<body>
+    <div id="conteudo" style="display: none;">
+        <h1>Conteúdo Adulto Aqui...</h1>
+        <p>Este é o conteúdo restrito que só aparece
+            para maiores de idade</p>
+    </div>
+</body>
+
+</html>

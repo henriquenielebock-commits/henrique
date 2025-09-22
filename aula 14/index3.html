@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Voçê e :<br/>
+    1. Gestante<br/>
+    2. Idoso(A)<br/>
+    3. Deficiente<br/>
+    4. Nenhuma das opções acima<br/>
+    <form action="">
+        <input type="number" id="option" /><br/>
+        <button onclick="verificar()">Verificar</button>
+    </form>
+    <script>
+        function verificar(){
+            var op = parseInt(document.getElementById("option").value);
+            if((op == 1) || (op == 2) || (op == 3)){
+                alert('fifla preferencial!!!')
+            }else{
+                alert('fila comum')
+            }
+        }
+    </script>
+     
+
+</body>
+</html>
