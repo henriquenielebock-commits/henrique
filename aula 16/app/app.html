@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container  mt-4">
+    <h2>Testando nosso Model Aluno</h2>
+    <div class="card" style="width: 300px;">
+      <img src="{{alunoTeste.foto}}" class="card-img-top" alt="Foto do Aluno">
+      <div class="card-body">
+        <h5 class="card-title">{{alunoTeste.nome }}</h5>
+        <p class="card-text">
+
+          <strong>Nota 1:</strong> {{alunoTeste.nota1}} <br>
+          <strong>Nota 2:</strong> {{alunoTeste.nota2}} <br>
+          <strong>Média:</strong> {{alunoTeste.media }} <br>
+          <span class="badge" [class.badge.success]="alunoTeste.situacao === 'Aprovado'"
+            [class.badge.danger]="alunoTeste.situacao === 'Reprovado'">
+            {{alunoTeste.situacao}}
+          </span>
+        </p>
+      </div>
+    </div>
+
+  </div><!--fecha o container do bootstrap-->
+
+</body>
+
+</html>
