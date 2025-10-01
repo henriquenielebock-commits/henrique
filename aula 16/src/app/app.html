@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container  mt-4">
+    <h2>Testando nosso Model Aluno</h2>
+    <!-- Sintaxe Moderna  @if em vez de ng*if-->
+    @if (alunos.length > 0 ) {
+    <p>Temos {{alunos.length}} alunos cadastrados</p>
+    <!--Mostrar apenas o primeiro aluno como exemplo-->
+    @if (alunos[0]; as primeiroAluno) {
+    <div class="card" style="width: 300px;">
+      <img src="{{primeiroAluno.foto}}" class="card-img-top" alt="Foto do Aluno">
+      <div class="card-body">
+        <h5 class="card-title">{{ primeiroAluno.nome }}</h5>
+        <p class="card-text">
+
+          <strong>Nota 1:</strong> {{ primeiroAluno.nota1 }} <br>
+          <strong>Nota 2:</strong> {{ primeiroAluno.nota2 }} <br>
+          <strong>Média:</strong> {{ primeiroAluno.media }} <br>
+          <span class="badge" [class.bg-success]="primeiroAluno.situacao === 'Aprovado'"
+            [class.bg-danger]="primeiroAluno.situacao === 'Reprovado'">
+            {{ primeiroAluno.situacao }}
+          </span>
+        </p>
+      </div>
+    </div><!--fecha o card do bootstrap-->
+    }
+    } @else{
+    <div class="alert alert-warning" role="alert">
+      Nenhum aluno cadastrado!
+    </div>
+    }
+
+
+  </div><!--fecha o container do bootstrap-->
+
+</body>
+
+</html>
